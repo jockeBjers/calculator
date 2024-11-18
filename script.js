@@ -4,19 +4,28 @@ let operator = '';
 
 const display = document.getElementById("display");
 
-
-function appendValue(value) {
+function setValue(value) {
     display.value += value;
-}
-
-function clearAllDisplay() {
-    display.value = '';
-}
-
-function clearLatest() {
-    if (display.value.length > 0) {
-        display.value = display.value.slice(0, -1);
+    if (!operator) {
+        firstNum += value;
+    } else {
+        secondNum += value;
     }
+}
+
+function setOperator(operation) {
+    if (firstNum === '') { return }
+    operator = operation;
+    display.value += `${operation}`
+}
+
+function calculateResult() {
+    const result = operate(operator, firstNum, secondNum);
+    display.value = result;
+
+    firstNum = result.toString();
+    secondNum = '';
+    operator = '';
 }
 
 function add(a, b) {
@@ -57,7 +66,21 @@ function operate(operator, a, b) {
             return multiply(a, b);
         case '/':
             return divide(a, b);
-        case '%': percentage(a);
+        case '%':
+            return percentage(a);
 
+    }
+}
+
+function clearAllDisplay() {
+    display.value = '';
+    firstNum = '';
+    secondNum = '';
+    operator = '';
+}
+
+function clearLatest() {
+    if (display.value.length > 0) {
+        display.value = display.value.slice(0, -1);
     }
 }

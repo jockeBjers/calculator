@@ -24,7 +24,7 @@ body {
     height: 700px;
     width: 550px;
     padding: 40px;
-    background: rgba(94, 94, 94 );
+    background: rgb(59, 59, 59);
     border-radius: 10px;
     display: grid;
     /* 
@@ -51,34 +51,37 @@ button {
     color: white;
     background: none;
     border: none;
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
 }
 
 .operator {
-    color: rgb(177, 177, 177);
+    color: rgb(255, 189, 91);
+}
+.operator:hover{
+    color: rgb(255, 166, 32);
 }
 
 button:hover {
     cursor: pointer;
-    background:  rgb(61, 61, 61);
+    background:  rgb(70, 70, 70);
 }
 
 #result {
     border: none;
     grid-column: span 2;
-    background: #4CAF50;
-    color: white;
+    color: #4CAF50;
 }
 
 #result:hover {
-    background: #5dd161;
+    color: #5dd161;
 }
 
 .clear {
-    background: #ec3124;
+    color: #ec3124;
 }
 
 .clear:hover {
-    background: #b3251b;
+    color: #b3251b;
 }

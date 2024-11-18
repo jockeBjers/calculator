@@ -14,24 +14,24 @@
     
     <div id="calculator-container">
         <input class="display" id="display"  placeholder="123">
-        <button onclick="appendValue('7')">7</button>
-        <button onclick="appendValue('8')">8</button>
-        <button onclick="appendValue('9')">9</button>
+        <button onclick="setValue('7')">7</button>
+        <button onclick="setValue('8')">8</button>
+        <button onclick="setValue('9')">9</button>
         <button class="operator" onclick="setOperator('/')">/</button>
-        <button onclick="appendValue('4')">4</button>
-        <button onclick="appendValue('5')">5</button>
-        <button onclick="appendValue('6')">6</button>
+        <button onclick="setValue('4')">4</button>
+        <button onclick="setValue('5')">5</button>
+        <button onclick="setValue('6')">6</button>
         <button class="operator" onclick="setOperator('*')">*</button>
-        <button onclick="appendValue('1')">1</button>
-        <button onclick="appendValue('2')">2</button>
-        <button onclick="appendValue('3')">3</button>
+        <button onclick="setValue('1')">1</button>
+        <button onclick="setValue('2')">2</button>
+        <button onclick="setValue('3')">3</button>
         <button class="operator" onclick="setOperator('-')">-</button>
-        <button onclick="appendValue('0')">0</button>
-        <button onclick="appendValue('.')">.</button>
-        <button class="operator" onclick="appendValue('%')">%</button>
+        <button onclick="setValue('0')">0</button>
+        <button onclick="setValue('.')">.</button>
+        <button class="operator" onclick="calculatePercentage()">%</button>
         <button class="operator" onclick="setOperator('+')">+</button>
-        <button class   ="clear" onclick="clearLatest()">Del</button>
-        <button class="clear" onclick="clearAllDisplay()">Ca</button>
+        <button class="clear" onclick="clearAllDisplay()">CA</button>
+        <button class="clear" onclick="clearLatest()">Del</button>
         <button id="result" onclick="calculateResult()">=</button>
     </div>
 
