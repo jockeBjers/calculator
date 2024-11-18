@@ -24,7 +24,7 @@ body {
     height: 700px;
     width: 550px;
     padding: 40px;
-    background: rgb(255, 138, 43);
+    background: rgba(94, 94, 94 );
     border-radius: 10px;
     display: grid;
     /* 
@@ -36,10 +36,11 @@ body {
 
 #display {
     grid-column: span 4;
-    background: rgb(46, 46, 46);
+    background: rgb(54, 54, 54);
     border: none;
     outline: none;
     text-align: end;
+    padding-right: 20px;
     font-size: 60px;
     color: white;
 }
@@ -47,25 +48,24 @@ body {
 button {
     font-size: 30px;
     font-weight: bold;
-    background: rgb(126, 126, 126);
-    border-radius: 50%;
-    background: linear-gradient(0deg, rgba(126, 126, 126, 1) 22%, rgba(195, 195, 195, 1) 78%);
+    color: white;
+    background: none;
     border: none;
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
 
 }
 
 .operator {
-    background: rgb(116, 116, 116);
+    color: rgb(177, 177, 177);
 }
 
 button:hover {
-    background: linear-gradient(0deg, rgb(68, 68, 68) 22%, rgba(195, 195, 195, 1) 78%);
     cursor: pointer;
+    background:  rgb(61, 61, 61);
 }
 
 #result {
     border: none;
-    border-radius: 0;
     grid-column: span 2;
     background: #4CAF50;
     color: white;
@@ -76,7 +76,6 @@ button:hover {
 }
 
 .clear {
-    border-radius: 0;
     background: #ec3124;
 }
 
