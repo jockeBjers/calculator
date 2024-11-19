@@ -38,6 +38,16 @@ function calculateResult() {
     operator = '';
 }
 
+function calculatePercentage() {
+    if (secondNum) {
+        secondNum = (parseFloat(secondNum) / 100).toString();
+        display.value = `${firstNum} ${operator} ${secondNum}`;
+    } else if (firstNum) {
+        firstNum = (parseFloat(firstNum) / 100).toString();
+        display.value = firstNum;
+    }
+}
+
 function add(a, b) {
 
     return a + b;
