@@ -4,24 +4,34 @@ let operator = '';
 
 const display = document.getElementById("display");
 
+function updateDisplay(value) {
+    display.value = value;
+}
+
 function setValue(value) {
-    display.value += value;
     if (!operator) {
         firstNum += value;
+        updateDisplay(firstNum);
     } else {
         secondNum += value;
+        updateDisplay(`${firstNum}${operator}${secondNum}`)
     }
 }
 
 function setOperator(operation) {
     if (firstNum === '') { return }
+    if (secondNum) {
+        firstNum = operate(operation, firstNum, secondNum).toString();
+        secondNum = '';
+    }
     operator = operation;
-    display.value += `${operation}`
+    updateDisplay(`${firstNum} ${operator}`);
 }
 
 function calculateResult() {
+    if (!operator || !secondNum) return;
     const result = operate(operator, firstNum, secondNum);
-    display.value = result;
+    updateDisplay(result);
 
     firstNum = result.toString();
     secondNum = '';
@@ -73,10 +83,10 @@ function operate(operator, a, b) {
 }
 
 function clearAllDisplay() {
-    display.value = '';
-    firstNum = '';
+     firstNum = '';
     secondNum = '';
     operator = '';
+    updateDisplay('');
 }
 
 function clearLatest() {
