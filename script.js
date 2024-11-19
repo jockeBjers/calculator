@@ -18,15 +18,21 @@ function setValue(value) {
     }
 }
 
+
 function setOperator(operation) {
-    if (firstNum === '') { return }
-    if (secondNum) {
-        firstNum = operate(operation, firstNum, secondNum).toString();
+    if (firstNum === '') {
+        return;
+    }
+
+    if (operator && secondNum) {
+        firstNum = operate(operator, firstNum, secondNum).toString();
         secondNum = '';
+        updateDisplay(`${firstNum}`);
     }
     operator = operation;
     updateDisplay(`${firstNum} ${operator}`);
 }
+
 
 function calculateResult() {
     if (!operator || !secondNum) return;
@@ -64,7 +70,9 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-
+    if (b === 0) {
+        return "Error";
+    }
     return a / b;
 }
 
@@ -93,7 +101,7 @@ function operate(operator, a, b) {
 }
 
 function clearAllDisplay() {
-     firstNum = '';
+    firstNum = '';
     secondNum = '';
     operator = '';
     updateDisplay('');
