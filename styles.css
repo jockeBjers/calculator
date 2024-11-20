@@ -47,7 +47,7 @@ body {
     color: white;
 }
 
-button {
+input[type="button"] {
     font-size: 40px;
     color: rgb(206, 206, 206);
     background: rgb(48, 48, 48);
@@ -58,19 +58,19 @@ button {
 
 }
 
-.operator {
+input[type="button"].operator {
     color: rgb(255, 189, 91);
 }
 .operator:hover{
     color: rgb(255, 166, 32);
 }
 
-button:hover {
+input[type="button"]:hover {
     cursor: pointer;
     background:  rgb(70, 70, 70);
 }
 
-#result {
+input[type="button"]#result {
     border: none;
     grid-column: span 2;
     color: #4CAF50;
@@ -80,7 +80,7 @@ button:hover {
     color: #5dd161;
 }
 
-.clear {
+input[type="button"].clear {
     color: #ec3124;
 }
 

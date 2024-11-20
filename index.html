@@ -11,42 +11,28 @@
 
 <body>
 
-    
     <div id="calculator-container">
-        <input class="display" id="display"  placeholder="123">
-        <button onclick="setValue('7')">7</button>
-        <button onclick="setValue('8')">8</button>
-        <button onclick="setValue('9')">9</button>
-        <button class="operator" onclick="setOperator('/')">/</button>
-        <button onclick="setValue('4')">4</button>
-        <button onclick="setValue('5')">5</button>
-        <button onclick="setValue('6')">6</button>
-        <button class="operator" onclick="setOperator('*')">*</button>
-        <button onclick="setValue('1')">1</button>
-        <button onclick="setValue('2')">2</button>
-        <button onclick="setValue('3')">3</button>
-        <button class="operator" onclick="setOperator('-')">-</button>
-        <button onclick="setValue('0')">0</button>
-        <button onclick="setValue('.')">.</button>
-        <button class="operator" onclick="calculatePercentage()">%</button>
-        <button class="operator" onclick="setOperator('+')">+</button>
-        <button class="clear" onclick="clearAllDisplay()">CA</button>
-        <button class="clear" onclick="clearLatest()">Del</button>
-        <button id="result" onclick="calculateResult()">=</button>
+        <input class="display" id="display" placeholder="123">
+        <input type="button" value="7" onclick="setValue(value)">
+        <input type="button" value="8" onclick="setValue(value)">
+        <input type="button" value="9" onclick="setValue(value)">
+        <input type="button" value="/" class="operator" onclick="setOperator(value)">
+        <input type="button" value="4" onclick="setValue(value)">
+        <input type="button" value="5" onclick="setValue(value)">
+        <input type="button" value="6" onclick="setValue(value)">
+        <input type="button" value="*" class="operator" onclick="setOperator(value)">
+        <input type="button" value="1" onclick="setValue(value)">
+        <input type="button" value="2" onclick="setValue(value)">
+        <input type="button" value="3" onclick="setValue(value)">
+        <input type="button" value="-" class="operator" onclick="setOperator(value)">
+        <input type="button" value="0" onclick="setValue(value)">
+        <input type="button" value="." onclick="setValue(value)">
+        <input type="button" value="%" class="operator" onclick="setOperator(value)">
+        <input type="button" value="+" class="operator" onclick="setOperator(value)">
+        <input type="button" value="CA" class="clear" onclick="clearAllDisplay()">
+        <input type="button" value="Del" class="clear" onclick="clearLatest()">
+        <input type="button" value="=" id="result" onclick="calculateResult()">
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 

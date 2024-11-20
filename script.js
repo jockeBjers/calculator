@@ -18,7 +18,6 @@ function setValue(value) {
     }
 }
 
-
 function setOperator(operation) {
     if (firstNum === '') {
         return;
@@ -32,7 +31,6 @@ function setOperator(operation) {
     operator = operation;
     updateDisplay(`${firstNum} ${operator}`);
 }
-
 
 function calculateResult() {
     if (!operator || !secondNum) return;
